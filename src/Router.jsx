@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { AuthLayout, RootLayout } from "./layouts";
-import { LoginPage } from "../../Dexam-FE/src/pages/oginpage";
+import { LoginPage } from "./pages/loginpage";
 import { SelectPage } from "./pages/SelectPage";
 
 export const router = createBrowserRouter([
@@ -12,11 +12,11 @@ export const router = createBrowserRouter([
         element: <RootLayout />,
         children: [
           {
-            path: "login",
+            path: "/login",
             element: <LoginPage />,
           },
           {
-            path: "select",
+            path: "/select",
             element: <SelectPage />,
           },
         ],
