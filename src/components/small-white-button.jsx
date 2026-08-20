@@ -1,17 +1,16 @@
 import styled from "styled-components";
 import { colors } from "../../../Dexam-FE/src/design-token";
 
-export const Button = ({
+export const SmallWhiteButton = ({
   title,
-  width = "350px",
-  color = colors.white[500],
-  backgroundColor = colors.green[500],
-  borderColor = colors.green[50],
-
+  width = "80px",
+  color = colors.gray[500],
+  backgroundColor = "#FFFFFF",
+  borderColor = colors.green[300],
   onClick,
 }) => {
   return (
-    <SmallGreenButton
+    <SmallWhiteButtonWrapper
       $width={width}
       $color={color}
       $backgroundColor={backgroundColor}
@@ -19,24 +18,20 @@ export const Button = ({
       onClick={onClick}
     >
       {title}
-    </SmallGreenButton>
+    </SmallWhiteButtonWrapper>
   );
 };
 
-const SmallGreenButton = styled.button`
+const SmallWhiteButtonWrapper = styled.button`
   width: ${({ $width }) => $width};
-  padding: 10px 0;
+  padding: 15px 0;
   border-radius: 14px;
   background: ${({ $backgroundColor }) => $backgroundColor};
   color: ${({ $color }) => $color};
   border: 1px solid ${({ $borderColor }) => $borderColor};
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.2s;
-
-  &:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-  }
 `;   
+
+export default SmallWhiteButton;
