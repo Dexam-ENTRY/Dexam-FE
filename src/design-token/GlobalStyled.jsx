@@ -1,6 +1,15 @@
 import { createGlobalStyle } from "styled-components";
+import OmyuPretty from "./omyu pretty.ttf";
 
 export const GlobalStyle = createGlobalStyle`
+
+  @font-face {
+    font-family: "Omyu Pretty";
+    src: url(${OmyuPretty}) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
   *,
   *::before,
   *::after {
@@ -17,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: "Pretendard", sans-serif;
+    font-family: "Omyu Pretty", sans-serif;
     background: #FFFCF0;
     color: #13251A;
     overflow-x: hidden;
@@ -72,3 +81,4 @@ export const GlobalStyle = createGlobalStyle`
     color: white;
   }
 `;
+

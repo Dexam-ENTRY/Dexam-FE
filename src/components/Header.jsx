@@ -20,7 +20,7 @@ const HeaderWrapper = styled.div`
   align-items: center;
   background-color: #fffcf3;
   outline-color: #ffffff;
-  margin: 25px 80px;
+  margin: 0px;
   gap: 8px;
   position: fixed;
   top: 0;
