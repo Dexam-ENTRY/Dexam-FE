@@ -2,16 +2,25 @@ import styled from "styled-components";
 import { colors } from "../design-token";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
-export const Header = ({ title, modeText, Color = colors.gray[600] }) => {
+export const Header = ({
+  title,
+  modeText,
+  Color = colors.gray[600],
+  backgroundColor = colors.ivory[500],
+}) => {
+  console.log("HEADER TITLE:", title);
+  console.log("HEADER MODE:", modeText);
+
   return (
-    <HeaderWrapper>
+    <HeaderWrapper backgroundColor={backgroundColor}>
       <IconWrapper>
         <FaArrowLeftLong />
         <Title $Color={Color}>{title}</Title>
       </IconWrapper>
+
       <ModeWrapper>
         <Mode>
-          <Circle></Circle>
+          <Circle />
           <ModeText>{modeText}</ModeText>
         </Mode>
       </ModeWrapper>
@@ -22,21 +31,25 @@ export const Header = ({ title, modeText, Color = colors.gray[600] }) => {
 const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: #fffcf3;
+  align-items: center;
+  background-color: ${({ $backgroundColor }) => $backgroundColor};
   border: 1px solid #ffffff;
   position: fixed;
-  top: 25px;
-  left: 80px;
-  right: 80px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   z-index: 1000;
-  height: auto;
+  height: 80px;
+  padding: 10px 80px;
+  box-sizing: border-box;
 `;
 
-const IconWrapper=styled.div`
-  display:flex;
-  align-items:center;
-  gap:10px;
-`
+const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  right: 200px;
+`;
 
 const ModeWrapper = styled.div`
   display: flex;
