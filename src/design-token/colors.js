@@ -9,7 +9,6 @@ export const colors = {
   },
   ivory: {
     500: "#FFFCF0",
-    600: "#FFFCF0",
   },
   gray: {
     300: "#0D1F141F",
