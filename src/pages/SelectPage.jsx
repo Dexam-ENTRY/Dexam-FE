@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { Button } from "components";
-import { CardBox } from "components/Cardbox";
+import { Button } from "../components";
+import { CardBox } from "../components";
 import { colors } from "../design-token";
 
 export const SelectPage = () => {
   const navigate = useNavigate();
+  const grade = [1, 2, 3];
+  const classroom = [1, 2, 3, 4];
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   return (
@@ -15,17 +17,16 @@ export const SelectPage = () => {
 
         <Select>
           <option>학년 선택</option>
-          <option>1학년</option>
-          <option>2학년</option>
-          <option>3학년</option>
+          {grade.map((number) => (
+            <option key={number}>{number}학년</option>
+          ))}
         </Select>
 
         <Select>
           <option>반 선택</option>
-          <option>1반</option>
-          <option>2반</option>
-          <option>3반</option>
-          <option>4반</option>
+          {classroom.map((number) => (
+            <option key={number}>{number}반</option>
+          ))}
         </Select>
 
         <Select>
