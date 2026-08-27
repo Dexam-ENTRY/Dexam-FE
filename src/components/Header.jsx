@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { colors } from "../design-token";
 
 export const Header = ({ title, Color = colors.gray[600] }) => {
+  
   return (
     <HeaderWrapper>
       <Title $Color={Color}>{title}</Title>
