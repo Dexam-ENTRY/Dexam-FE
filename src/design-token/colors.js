@@ -20,4 +20,9 @@ export const colors = {
     500: "#FFFFFF",
     600: "#F1F7F2",
   },
+  red: {
+    300: "#FFF0F0",
+    400: "#F3C5C5",
+    500: "#D94C4C"
+  }
 };
