@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { Header } from "../../components";
+import { useNavigate } from "react-router-dom";
 
 const MyPage = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <Header />
@@ -21,56 +24,57 @@ const MyPage = () => {
             </ProfileCard>
 
             <MenuList>
-              <MenuButton>시험일정 확인하러가기 &gt;</MenuButton>
-              <MenuButton>공지사항 확인하러가기 &gt;</MenuButton>
-              <MenuButton>
-                시험 및 수행평가 확인하러가기 &gt;
-              </MenuButton>
-            </MenuList>
-          </LeftSection>
+              <MenuButton type="button"
+                onClick={() => navigate("/exam")}> 시험일정 확인하러가기 &gt;</MenuButton>
+            <MenuButton>공지사항 확인하러가기 &gt;</MenuButton>
+            <MenuButton>
+              시험 및 수행평가 확인하러가기 &gt;
+            </MenuButton>
+          </MenuList>
+        </LeftSection>
 
-          <TimetableCard>
-            <TimetableTitle>시간표 확인하기</TimetableTitle>
+        <TimetableCard>
+          <TimetableTitle>시간표 확인하기</TimetableTitle>
 
-            <TimetableList>
-              <TimetableRow>
-                <Period>1교시</Period>
-                <Subject>수학</Subject>
-              </TimetableRow>
+          <TimetableList>
+            <TimetableRow>
+              <Period>1교시</Period>
+              <Subject>수학</Subject>
+            </TimetableRow>
 
-              <TimetableRow>
-                <Period>2교시</Period>
-                <Subject>과학</Subject>
-              </TimetableRow>
+            <TimetableRow>
+              <Period>2교시</Period>
+              <Subject>과학</Subject>
+            </TimetableRow>
 
-              <TimetableRow>
-                <Period>3교시</Period>
-                <Subject>과학</Subject>
-              </TimetableRow>
+            <TimetableRow>
+              <Period>3교시</Period>
+              <Subject>과학</Subject>
+            </TimetableRow>
 
-              <TimetableRow>
-                <Period>4교시</Period>
-                <Subject>과학</Subject>
-              </TimetableRow>
+            <TimetableRow>
+              <Period>4교시</Period>
+              <Subject>과학</Subject>
+            </TimetableRow>
 
-              <TimetableRow>
-                <Period>5교시</Period>
-                <Subject>과학</Subject>
-              </TimetableRow>
+            <TimetableRow>
+              <Period>5교시</Period>
+              <Subject>과학</Subject>
+            </TimetableRow>
 
-              <TimetableRow>
-                <Period>6교시</Period>
-                <Subject>과학</Subject>
-              </TimetableRow>
+            <TimetableRow>
+              <Period>6교시</Period>
+              <Subject>과학</Subject>
+            </TimetableRow>
 
-              <TimetableRow>
-                <Period>7교시</Period>
-                <Subject>과학</Subject>
-              </TimetableRow>
-            </TimetableList>
-          </TimetableCard>
-        </Content>
-      </Main>
+            <TimetableRow>
+              <Period>7교시</Period>
+              <Subject>과학</Subject>
+            </TimetableRow>
+          </TimetableList>
+        </TimetableCard>
+      </Content>
+    </Main >
     </>
   );
 };

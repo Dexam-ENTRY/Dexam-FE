@@ -1,12 +1,12 @@
-import { BrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 import { GlobalStyle } from "./design-token";
-import { ExamDetail } from "./pages/exam/ExamDetail";
+import { router } from "./Router";
 
 export const App = () => {
   return (
-    <BrowserRouter>
+    <>
       <GlobalStyle />
-      <ExamDetail></ExamDetail>
-    </BrowserRouter>
+      <RouterProvider router={router} />
+    </>
   );
 };
